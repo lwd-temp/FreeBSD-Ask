@@ -2,8 +2,11 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
 
-请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。
+请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。  
 
+！！注意，下面arch.sh的下载链接已经失效，可以使用@Alex的“FreeBSD Linux兼容层管理器”安装兼容层，再根据教程手动配置。  
+Github存储库地址：<a href="https://github.com/Alex6357/compatmgr">compatmgr</a><br>
+由于安装脚本丢失，无法一步安装到位，现在无法输入中文，无法联网的问题，请看这里=》<a href="https://book.bsdcn.org/di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi">Linux兼容层故障排除</a>
 ```shell-session
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
@@ -47,6 +50,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # apt install libgbm-dev libasound2-dev #此时位于 Ubuntu 兼容层
 # ldconfig #此时位于 Ubuntu 兼容层
 ```
+安装中文字体：用包管理器查找中文字体，例如 wqy
 
 启动 QQ：
 
@@ -56,9 +60,10 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # /bin/qq --no-sandbox --in-process-gpu #此时位于 Ubuntu 兼容层
 ```
 
-![](../.gitbook/assets/qq3.0.png)
-
 > **注意**
 >
+> 如果你双网卡，例如一个有线一个无线，打开QQ以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个IP.
+> 参见<a href="https://book.bsdcn.org/di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi">Linux兼容层故障排除</a><br>
 > **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
 
+![](../.gitbook/assets/qq3.0.png)
